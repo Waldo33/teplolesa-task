@@ -33,6 +33,16 @@ function scss() {
         .pipe(dest('dist'))
 }
 
+function images() {
+    return src('src/images/**')
+        .pipe(dest('dist/images'))
+}
+
+function fonts() {
+    return src('src/fonts/**')
+        .pipe(dest('dist/fonts'))
+}
+
 function clear() {
     return del('dist')
 }
@@ -44,8 +54,9 @@ function serve() {
 
     watch('src/**.html', series(html)).on('change', sync.reload)
     watch('src/scss/**.scss', series(scss)).on('change', sync.reload)
+    watch('src/images/**', series(images)).on('change', sync.reload)
 }
 
-exports.build = series(clear, scss, html)
-exports.serve = series(clear, scss, html, serve)
+exports.build = series(clear, scss, html, images, fonts)
+exports.serve = series(clear, scss, html, images, fonts, serve)
 exports.clear = clear

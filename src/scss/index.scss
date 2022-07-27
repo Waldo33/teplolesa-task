@@ -2,11 +2,24 @@
 @import '_variables';
 @import '_mixins';
 
+.container {
+    padding: 0;
+    .row {
+        padding: 0;
+        @for $i from 1 through 12 {
+            div.col-#{$i} { 
+                padding: 0;
+            }
+        }
+    }
+}
+
 body {
     font-family: 'Manrope', sans-serif;
 }
 
 header {
+    position: absolute;
     width: 100%;
     height: 80px;
     background: #FFF;
@@ -15,27 +28,58 @@ header {
     .header__menu {
         height: 100%;
         &-list {
+            margin: 0;
+            padding-left: 0;
             height: 100%;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             align-items: center;
             list-style: none;
             &-item {
+                margin: 0 48px 0 0;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 15px;
                 line-height: 20px;
                 &-link {
+                    text-align: center;
                     text-decoration: none;
                     color: $text;
                 }
             }
         }
     }
+    .header__contact {
+        display: flex;
+        align-items: center;
+        height: 100%;
+        &-button {
+            @include button;
+            height: 40px;
+        }
+    }
 }
 
 .banner {
+    padding: 220px 0;
     width: 100%;
     min-height: 700px;
     background: url('images/banner_bg.png');
+    background-size: cover;
+    color: #FFF;
+    &__heading {
+        font-size: 58px;
+        font-weight: 700;
+    }
+    &__description {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+    }
+    &__button {
+        margin-top: 40px;
+        height: 50px;
+        @include button;
+        font-size: 16px;
+    }
 }
