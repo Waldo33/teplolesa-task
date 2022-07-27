@@ -8,18 +8,18 @@
 
 - Валидная верстка
 - Bootstrap 4
-- (PerfectPixel)[https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru] соответствие 95%
+- [PerfectPixel](https://chrome.google.com/webstore/detail/perfectpixel-by-welldonec/dkaagdgjmgdmbnecmcefdhjekcoceebi?hl=ru) соответствие 95%
 
 ### Используемые технологии
 
-- Figma ((макет)[https://www.figma.com/file/JnDBZwVv236Yaar3vGYShn/teplolesa_fullsite?node-id=45%3A0])
+- Figma ([макет](https://www.figma.com/file/JnDBZwVv236Yaar3vGYShn/teplolesa_fullsite?node-id=45%3A0))
 - Gulp
 - Perfect Pixel
 - SCSS
 
 ### Ссылка на результат
 
-(GitHub Pages)[https://waldo33.github.io/teplolesa-task/]
+[GitHub Pages](https://waldo33.github.io/teplolesa-task/)
 
 ## Установка
 
