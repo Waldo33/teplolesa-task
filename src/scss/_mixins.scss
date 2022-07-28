@@ -11,4 +11,9 @@
     font-size: 13px;
     line-height: 14px;
     color: #FFFFFF;
+    transition: all 0.3s;
+    &:hover, &:focus {
+        background: linear-gradient(#FF5C00 100%);
+        outline: none;
+    }
 }
