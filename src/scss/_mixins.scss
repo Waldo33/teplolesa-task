@@ -15,5 +15,7 @@
     &:hover, &:focus {
         background: linear-gradient(#FF5C00 100%);
         outline: none;
+        text-decoration: none;
+        color: #FFF;
     }
 }
