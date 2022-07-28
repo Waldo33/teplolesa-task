@@ -2,17 +2,17 @@
 @import '_variables';
 @import '_mixins';
 
-.container {
-    padding: 0;
-    .row {
-        padding: 0;
-        @for $i from 1 through 12 {
-            div.col-#{$i} { 
-                padding: 0;
-            }
-        }
-    }
-}
+// .container {
+//     padding: 0;
+//     .row {
+//         padding: 0;
+//         @for $i from 1 through 12 {
+//             div.col-#{$i} { 
+//                 padding: 0;
+//             }
+//         }
+//     }
+// }
 
 body {
     font-family: 'Manrope', sans-serif;
@@ -67,7 +67,7 @@ header {
             align-items: center;
             list-style: none;
             &-item {
-                margin: 0 48px 0 0;
+                // margin: 0 48px 0 0;
                 font-style: normal;
                 height: 100%;
                 font-weight: 400;
@@ -178,8 +178,9 @@ header {
     padding: 70px 0 50px;
     &__list {
         &-item {
+            // margin: 0 auto;
             padding: 30px;
-            width: 360px;
+            width: 370px;
             height: 208px;
             background: #FFFFFF;
             box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.08);
@@ -203,6 +204,7 @@ header {
                 position: absolute;
                 font-size: 24px;
                 line-height: 30px;
+                font-weight: 600;
                 color: $dark-gray;
             }
             &-arrow {
@@ -219,8 +221,10 @@ header {
             }
             &:hover {
                 cursor: pointer;
-                h3 {
+                p {
                     color: #FFF;
+                    font-weight: 600;
+                    font-size: 24px;
                 }
                 &:before {
                     transform: translateY(-15px);
@@ -242,6 +246,7 @@ header {
 
 .log {
     padding: 50px 0 50px;
+    background: url('../images/tree-ring-vectors.png') no-repeat 112%;
     &__description {
         color: $dark-gray;
         &-heading {
@@ -275,7 +280,8 @@ header {
 }
 
 .portfolio {
-    padding-bottom: 20px;
+    padding: 20px 0;
+    background: url('../images/tree-ring-vectors-2.png') no-repeat 0px 625px;
     &__button {
         @include button;
         width: 168px;
@@ -296,8 +302,9 @@ header {
         color: $dark-gray;
     }
     &__item {
-        margin: 20px 0 0 0;
+        margin: 10px 0 0;
         display: flex;
+        z-index: 2;
         flex-direction: column;
         justify-content: end;
         width: 370px;
@@ -361,7 +368,7 @@ header {
             .portfolio {
                 &__item {
                     &-fade {
-                        opacity: 0.8;
+                        opacity: 0.9;
                     }
                     &-content {
                         &-heading {
@@ -380,6 +387,161 @@ header {
                 }
             }
         }
+    }
+}
+
+.advantages {
+    background: url('../images/tree-ring-vectors-2.png') no-repeat 0px -200px;
+    padding: 50px 0 70px;
+    &__heading {
+        text-align: center;
+        font-weight: 600;
+        font-size: 36px;
+        margin: 0;
+        color: $dark-gray;
+    }
+    &__item {
+        text-align: center;
+        margin: 0 auto;
+        margin-top: 50px;
+        padding: 0 45px;
+        color: $dark-gray;
+        &-image {
+            display: block;
+        }
+        &-description {
+            margin-top: 20px;
+            display: block;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+}
+
+.request-form {
+    text-align: center;
+    padding: 50px 5px;
+    background: linear-gradient(180deg, #FF9700 10.14%, #FF6800 78.17%, #FF6802 78.33%);
+    color: #FFFFFF;
+    position: relative;
+    .col-10 {
+        z-index: 2;
+    }
+    &__image {
+        &-1 {
+            position: absolute;
+            right: 206px;
+            top: -90px;
+            z-index: 1;
+        }
+        &-2 {
+            position: absolute;
+            left: 193px;
+            bottom: -42px;
+            z-index: 1;
+        }
+    }
+    &__heading {
+        font-weight: 600;
+        font-size: 42px;
+        line-height: 58px;
+    }
+    &__text {
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+    }
+    &__form {
+        margin-top: 30px;
+        &-number {
+            background: #FFFFFF;
+            width: 222px;
+            height: 50px;
+            border-radius: 50px;
+            padding: 14px 20px;
+            margin-right: 10px;
+            border: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 22px;
+            color: #333;
+            &:focus {
+                outline: none;
+            }
+
+        }
+        &-button {
+            background: #333333;
+            width: 222px;
+            height: 50px;
+            border-radius: 50px;
+            padding: 14px 40px;
+            border: none;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 22px;
+            text-align: center;
+            color: #FFFFFF;
+            transition: all 0.4s ease-in-out;
+            &:focus, &:active, &:hover {
+                outline: none;
+                cursor: pointer;
+                background: #222222;
+                border-radius: 50px;
+            }
+        }
+        &-description {
+            margin-top: 10px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            color: #A72800;
+            a {
+                color: #A72800;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+
+.about {
+    padding: 70px 0;
+    color: $dark-gray;
+    &__scrollbar {
+        padding: 0 30px;
+        height: 414px;
+        overflow: auto;
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+        &::-webkit-scrollbar-track {
+            background: #EAEAEA;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #FF9701;
+            border-radius: 100px;
+        }
+    }
+    &__heading {
+        &-1 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 36px;
+            line-height: 46px;
+        }
+        &-2 {
+            font-style: normal;
+            font-weight: 600;
+            font-size: 24px;
+            line-height: 34px;
+        }
+    }
+    &__text {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
     }
 }
 
