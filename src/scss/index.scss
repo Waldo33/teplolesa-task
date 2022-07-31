@@ -554,7 +554,7 @@ footer {
     color: #FFF;
     .footer {
         &__content {
-            padding: 40px 0 62px;
+            padding: 40px 0 52px;
         }
         &__menu {
             &-link {
@@ -575,7 +575,7 @@ footer {
                 list-style: none;
                 padding-left: 0;
                 &-item {
-                    margin-top: 10px;
+                    margin-bottom: 10px;
                 }
             }
         }
