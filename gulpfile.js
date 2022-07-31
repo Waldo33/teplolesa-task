@@ -53,6 +53,7 @@ function serve() {
     })
 
     watch('src/**.html', series(html)).on('change', sync.reload)
+    watch('src/parts/**.html', series(html)).on('change', sync.reload)
     watch('src/scss/**.scss', series(scss)).on('change', sync.reload)
     watch('src/images/**', series(images)).on('change', sync.reload)
 }

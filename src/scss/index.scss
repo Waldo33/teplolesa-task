@@ -548,7 +548,104 @@ header {
 footer {
     min-height: 298px;
     background: $dark-gray;
-    .brd {
-        border: 1px solid black;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    color: #FFF;
+    .footer {
+        &__content {
+            padding: 40px 0 62px;
+        }
+        &__menu {
+            &-link {
+                font-style: normal;
+                font-weight: 300;
+                font-size: 18px;
+                color: #FFF;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    text-decoration: none;
+                    color: $orange;
+                }
+            }
+            display: flex;
+            gap: 155px;
+            &-list {
+                margin-bottom: 0;
+                list-style: none;
+                padding-left: 0;
+                &-item {
+                    margin-top: 10px;
+                }
+            }
+        }
+        &__contact {
+            margin-left: 80px;
+            &-heading {
+                display: block;
+                margin-bottom: 15px;  
+            }
+            a {
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                color: #FFF;
+                display: block;
+                transition: all 0.3s ease-in-out;
+                &:hover {
+                    text-decoration: none;
+                    color: $orange;
+                }
+            }
+            a.insta {
+                margin-top: 20px;
+                img {
+                    margin-right: 10px;
+                }
+            }
+        }
+        &__info {
+            border-top: 1px solid #7D7D7D;
+            padding: 25px 0;
+            .d-fl {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+            &-copyright {
+                display: inline-block;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 14px;
+                color: #aaa;
+                margin-right: 28px;
+            }
+            &-policy {
+                display: inline-block;
+                margin: 0;
+                a {
+                    margin: 0;
+                    padding: 0;
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    text-decoration-line: underline;
+                    color: #aaa;
+                }
+            }
+            &-author {
+                a {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 19px;
+                    color: #aaa;
+                }
+                img {
+                    margin-left: 5px;
+                }
+            }
+        }
+        
     }
 }
