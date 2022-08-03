@@ -1,0 +1,54 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'global';
+
+.page404 {
+    min-height: 650px;
+    padding: 100px 0 70px;
+    position: relative;
+    text-align: center;
+    &__heading {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 36px;
+        line-height: 36px;
+    }
+    &__image {
+        height: 260px;
+        text-align: center;
+        color: $orange;
+        font-size: 250px;
+        line-height: 250px;
+        margin-top: 0;
+        font-weight: 800;
+        position: relative;
+        img {
+            width: 250px;
+        }
+        &::before {
+            position: absolute;
+            left: 375px;
+            content: "4";
+            transition: all 1s ease-in-out;
+        }
+        &::after {
+            position: absolute;
+            right: 375px;
+            z-index: -1;
+            content: "4";
+            transition: all 1s ease-in-out;
+        }
+    }
+    &__text {
+        margin: 15px 0 40px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+    }
+    &__button {
+        @include button;
+        padding: 14px 28px;
+    }
+}

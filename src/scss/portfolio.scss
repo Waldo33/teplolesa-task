@@ -1,0 +1,15 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'global';
+
+.page {
+    padding: 100px 0 70px;
+    .portfolio {
+        &__heading {
+            margin-top: 20px;
+            margin-bottom: 0;
+            text-align: left;
+        }
+    }
+}
