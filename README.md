@@ -19,7 +19,7 @@
 
 ### Ссылка на результат
 
-[GitHub Pages](https://waldo33.github.io/teplolesa-task/dist/)
+[GitHub Pages](https://waldo33.github.io/teplolesa-task/)
 
 ## Установка
 
