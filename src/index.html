@@ -12,7 +12,7 @@
 </section>
 <section class="categories">
     <div class="container">
-        <div id="about" class="categories__list">
+        <div class="categories__list">
             <div class="row">
                 <div class="col-4">
                     <div class="categories__list-item">
@@ -39,7 +39,7 @@
         </div>
     </div>
 </section>
-<section class="log">
+<section id="about" class="log">
     <div class="container">
         <div class="row">
             <div class="col-5">
@@ -72,7 +72,7 @@
     <div class="container">
         <div class="row">
             <div class="col">
-                <p class="portfolio__heading">Наши работы</p>
+                <p id="projects" class="portfolio__heading">Наши работы</p>
             </div>
         </div>
         <div class="row">
@@ -222,8 +222,8 @@
                 <span class="request-form__text">Оставьте свой номер, мы свяжемся с вами, уточним детали и рассчитаем стоимость дома вашей мечты</span>
                 <div class="request-form__form">
                     <form action="#">
-                        <input class="request-form__form-number" type="number" placeholder="Телефон">
-                        <button class="request-form__form-button">Оставить заявку</button>
+                        <input class="request-form__form-number" type="tel" placeholder="Телефон" pattern="[+]{1}[0-9]{11}" onclick="this.value=`+7`" required>
+                        <button class="request-form__form-button" type="submit">Оставить заявку</button>
                     </form>
                     <span class="request-form__form-description">Нажимая кнопку, я соглашаюсь <a href="#">на обработку персональных данных</a></span>
                 </div>
