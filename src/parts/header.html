@@ -54,7 +54,7 @@
             </div>
             <div class="col-2">
                 <div class="header__contact">
-                    <button class="header__contact-button"><span></span></button>
+                    <button data-toggle="modal" data-target="#myModal" class="header__contact-button"><span></span></button>
                 </div>
             </div>
         </div>
@@ -64,3 +64,15 @@
     <img height="20" src="images/svg/instagram.svg" alt="">
     <span>Мы в Instagram</span>
 </a>
+<div id="myModal" class="modal fade" id="exampleModal" aria-labelledby="exampleModal" aria-hidden="true">
+<div class="modal-dialog" role="document">
+    <div class="modal-content">
+            <h5 class="modal-title" id="exampleModal">Заказать звонок</h5>
+            <form action="modal-form">
+                <input type="tel" class="modal-form-input" placeholder="Телефон">
+                <button type="button" class="modal-form-button">Заказать</button>
+            </form>
+            <span>Нажимая кнопку, вы соглашаетесь <a href="#">на обработку данных</a></span>
+    </div>
+</div>
+</div>
