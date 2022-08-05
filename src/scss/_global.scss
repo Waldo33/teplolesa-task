@@ -386,12 +386,21 @@ footer {
 }
 
 #myModal {
+    #modal-cross {
+        position: absolute !important;
+        right: 10px;
+        top: 10px;
+    }
     .modal {
         &-dialog {
+            position: relative;
             top: 60px;
             margin-top: 0;
             width: 270px;
             text-align: center;
+        }
+        &-title {
+            margin-top: 0px;
         }
         &-content {
             padding: 45px 27px 40px;
@@ -411,22 +420,69 @@ footer {
             }
         }
         &-form  {
+            &-item {
+                margin-top: 20px;
+                display: inline-block;
+                vertical-align: top;
+                position: relative;
+                
+            }
             &-input {
-                margin-top: 10px;
-                width: 215px;
+                width: 100%;
                 height: 50px;
-                background: #FFFFFF;
+                padding: 23px 20px 10px;
                 border: 1px solid #E3E1E1;
                 border-radius: 50px;
-                padding: 15px 20px;
-                font-style: normal;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 22px;
-                color: #777;
-                &:focus, &:active, &:hover {
+                &:not(:focus):valid {
+                    &~.modal-form-label {
+                        top: 7px;
+                        font-weight: 400;
+                        font-size: 11px;
+                        line-height: 15px;
+                    }
+                }
+                &:not(:empty) {
+                    &~.modal-form-label {
+                        top: 7px;
+                        font-weight: 400;
+                        font-size: 11px;
+                        line-height: 15px;
+                    }
+                }
+                &:focus, &:active {
                     outline: none;
                     border: 1px solid #B3DAFF;
+                    &~.modal-form-label {
+                        top: 7px;
+                        font-weight: 400;
+                        font-size: 11px;
+                        line-height: 15px;
+                    }
+                    &:invalid {
+                        border: 1px solid #FF0000;
+                        &~.modal-form-label::after {
+                            content: "Неверный номер телефона";
+                            color: #FF0000;
+                        }
+                    }
+                }
+            }
+            &-label {
+                position: absolute;
+                pointer-events: none;
+                left: 20px;
+                right: 20px;
+                top: 0;
+                text-align: left;
+                white-space: nowrap;
+                overflow: hidden;
+                line-height: 50px;
+                transition: all .4s ease-in-out;
+                &::after {
+                    content: "Телефон";
                 }
             }
             &-button {

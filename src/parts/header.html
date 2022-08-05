@@ -60,17 +60,23 @@
         </div>
     </div>       
 </header>
+<!-- Ссылка на инстаграм -->
 <a href="/" class="fixed-link">
     <img height="20" src="images/svg/instagram.svg" alt="">
     <span>Мы в Instagram</span>
 </a>
+<!-- Модальное окно -->
 <div id="myModal" class="modal fade" id="exampleModal" aria-labelledby="exampleModal" aria-hidden="true">
 <div class="modal-dialog" role="document">
     <div class="modal-content">
+            <img data-dismiss="modal" id="modal-cross" width="10" src="images/svg/cross.svg" alt="">
             <h5 class="modal-title" id="exampleModal">Заказать звонок</h5>
-            <form action="modal-form">
-                <input type="tel" class="modal-form-input" placeholder="Телефон">
-                <button type="button" class="modal-form-button">Заказать</button>
+            <form class="modal-form" action="#">
+                <div class="modal-form-item">
+                    <input class="modal-form-input" onclick="value=`+7`" name="tel" type="tel" pattern="[+]{1}[0-9]{11,14}" required>
+                    <label class="modal-form-label" for="tel"></label>
+                </div>
+                <button type="submit" class="modal-form-button">Заказать</button>
             </form>
             <span>Нажимая кнопку, вы соглашаетесь <a href="#">на обработку данных</a></span>
     </div>
